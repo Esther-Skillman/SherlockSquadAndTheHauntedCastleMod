@@ -1,0 +1,156 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: EmptyWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 58.0, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,c1,d1,e1,f1,g1,h1,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,c2,d2,e2,f2,g2,h2,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b3,c3,d3,e3,f3,g3,h3,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b4,c4,d4,e4,f4,g4,h4,i4,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b5,c5,d5,e5,f5,g5,h5,i5,j5, k5,l5,__,__,__,
+  __,__,__,__,__,__,__, b6,c6,d6,e6,f6,g6,h6,i6,j6, k6,l6,__,__,__,
+  __,__,__,__,__,__,__, b7,c7,d7,e7,f7,g7,h7,i7,j7, k7,l7,__,__,__,
+  __,__,__,__,__,__,__, b8,c8,d8,e8,f8,g8,h8,i8,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b9,c9,d9,e9,f9,g9,h9,i9,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,fa,ga,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__
+
+gridObjects:
+
+  c1: [ wall_corner_se ]
+  d1: [ wall_s ]
+  e1: [ wall_s ]
+  f1: [ wall_s ]
+  g1: [ wall_s ]
+  h1: [ wall_s ]
+
+  c2: [ f , temporaryTable_s ]
+  d2: [ f ]
+  e2: [ f ]
+  f2: [ f, ball , EvidenceBox ]
+  g2: [ f, Cat_P ]
+  h2: [ f ]
+
+  b3: [ wall_e ]
+  c3: [ f, { id: ghost_original, data: { id: g1 } } , route_corner ]
+  d3: [ f ]
+  e3: [ f, route_corner3 ]
+  f3: [ f ]
+  g3: [ f, EvidenceBox ]
+  h3: [ f ]
+
+  b4: [ wall_e ]
+  c4: [ f,ball, ghostRoute ]
+  d4: [ f, table ]
+  e4: [ f, ghostRoute ]
+  f4: [ f ]
+  g4: [ f ]
+  h4: [ f ]
+  i4: [ f ]
+
+  b5: [ wall_e]
+  c5: [ f, route_corner1 ]
+  d5: [ f, ghostRoute1 ]
+  e5: [ f, route_corner2]
+  f5: [ f ]
+  g5: [ f ]
+  h5: [ f ]
+  i5: [ f ]
+  j5: [ f ]
+  k5: [ f ]
+  l5: [ f ]
+
+
+  b6: [ wall_e ]
+  c6: [ f ]
+  d6: [ f ]
+  e6: [ f ]
+  f6: [ f ]
+  g6: [ f ]
+  h6: [ f ]
+  i6: [ f ]
+  j6: [ f ]
+  k6: [ f ]
+  l6: [ f ]
+
+
+  b7: [ wall_e ]
+  c7: [ f ]
+  d7: [ f ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f ]
+  h7: [ f ]
+  i7: [ f ]
+  j7: [ f ]
+  k7: [ f ]
+  l7: [ f ]
+
+
+  b8: [ wall_e ]
+  c8: [ f ]
+  d8: [ f ]
+  e8: [ f ]
+  f8: [ f ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+
+  b9: [ wall_e ]
+  c9: [ f]
+  d9: [ f ]
+  e9: [ f ]
+  f9: [ f ]
+  g9: [ f ]
+  h9: [ f, pill ]
+  i9: [ f, { id: ghost_original, data: { id: g2 } } ]
+
+  fa: [ f, p1, floordeco2]
+  ga: [ f, p2, floordeco3]
+
+objectDefinitions:
+  power1:
+    mapObject: BlankMobile
+    art3d:
+    - model: "Art/3D/Sphere.glb"
+      pos: { y: 1 }
+      scale: { x: 0.5, y: 0.5, z: 0.6 }
+    art2d:
+    - texture: "MakeYourOwnWithThisTemplate.png"
+      displayType: decal
+      projectionDistance: 1
+      pos: { x: -0.5, y: 0.6, z: -0.5 }
+      rot: { x: 45, y: 135, z: 0 }
+      scale: { x: 0.7, y: 0.7, z: 1 }
+    mods:
+    - name: DestroyOwnerWhenPlayerEntersSquare
+
+
+sounds:
+  # See CoOperation for examples using sound
+
+globalData:
+  g1: { health: 3, moves: ["5", "south","2","east","5","north","2","west"]}
+
+

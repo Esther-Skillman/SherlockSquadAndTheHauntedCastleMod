@@ -1,0 +1,160 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: EmptyWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 58.0, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,c1,d1,e1,f1,g1,h1,i1,j1, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,c2,d2,e2,f2,g2,h2,i2,j2, __,__,__,__,__,
+  __,__,__,__,__,__,__, b3,c3,d3,e3,f3,g3,h3,i3,j3, __,__,__,__,__,
+  __,__,__,__,__,__,__, b4,c4,d4,e4,f4,g4,h4,i4,j4, __,__,__,__,__,
+  __,__,__,__,__,__,__, b5,c5,d5,e5,f5,g5,h5,i5,j5, __,__,__,__,__,
+  __,__,__,__,__,__,__, b6,c6,d6,e6,f6,g6,h6,i6,j6, __,__,__,__,__,
+  __,__,__,__,__,__,__, b7,c7,d7,e7,f7,g7,h7,i7,j7 __,__,__,__,__,
+  __,__,__,__,__,__,__, b8,c8,d8,e8,f8,g8,h8,i8,j8, __,__,__,__,__,
+  __,__,__,__,__,__,__, b9,c9,d9,e9,f9,g9,h9,i9,j9, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,ea,fa,ga,ha,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__
+
+gridObjects:
+
+  c1: [ wall_corner_se ]
+  d1: [ wall_s ]
+  e1: [ wall_s ]
+  f1: [ wall_s ]
+  g1: [ wall_s ]
+  h1: [ wall_s ]
+  i1: [ wall_s ]
+  j1: [ wall_s ]
+
+  c2: [ f ]
+  d2: [ f ]
+  e2: [ f, torch_s, alight, temporaryTable_e]
+  f2: [ f, p3, floordeco3]
+  g2: [ f, p4, floordeco3]
+  h2: [ f, torch_s, alight ]
+  i2: [ f ]
+  j2: [ f ]
+
+  b3: [ wall_e ]
+  c3: [ f, torch_e, alight ]
+  d3: [ f,  { id: ghost_party, data: { id: g2 } }  ]
+  e3: [ f ]
+  f3: [ f ]
+  g3: [ f ]
+  h3: [ f ]
+  i3: [ f, { id: ghost_original, data: { id: g1 } } ]
+  j3: [ f, alight ]
+
+  b4: [ wall_e ]
+  c4: [ f, Cat_P, EvidenceBox ]
+  d4: [ f ]
+  e4: [ f ]
+  f4: [ f ]
+  g4: [ f ]
+  h4: [ f, ball, EvidenceBox ]
+  i4: [ f ]
+  j4: [ f ]
+
+  b5: [ wall_e]
+  c5: [ f, torch_e, alight ]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [ f, table ]
+  g5: [ f ]
+  h5: [ f, Doll ]
+  i5: [ f ]
+  j5: [ f ]
+
+  b6: [ wall_e ]
+  c6: [ f, { id: ghost_cowboy, data: { id: g4 } } ]
+  d6: [ f ]
+  e6: [ f ]
+  f6: [ f, alight ]
+  g6: [ f, alight ]
+  h6: [ f ]
+  i6: [ f ]
+  j6: [ f, { id: ghost_sherlock, data: { id: g3 } } ]
+
+  b7: [ wall_e ]
+  c7: [ f,torch_e, alight]
+  d7: [ f  ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f, Cat_P ]
+  h7: [ f ]
+  i7: [ f ]
+  j7: [ f, alight ]
+
+  b8: [ wall_e ]
+  c8: [ f, temporaryTable_e ]
+  d8: [ f ]
+  e8: [ f ]
+  f8: [ f ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+  j8: [ f, Cat_P, EvidenceBox ]
+
+  b9: [ wall_e ]
+  c9: [ f, torch_e, alight]
+  d9: [ f ]
+  e9: [ f ]
+  f9: [ f ]
+  g9: [ f ]
+  h9: [ f ]
+  i9: [ f ]
+  j9: [ f ]
+
+  ea: [ f, torch_e, alight ]
+  fa: [ f, p1, floordeco3]
+  ga: [ f, p2, floordeco3]
+  ha: [ f, alight ]
+
+objectDefinitions:
+  power1:
+    mapObject: BlankMobile
+    art3d:
+      - model: "Art/3D/Sphere.glb"
+        pos: { y: 1 }
+        scale: { x: 0.5, y: 0.5, z: 0.6 }
+    art2d:
+      - texture: "MakeYourOwnWithThisTemplate.png"
+        displayType: decal
+        projectionDistance: 1
+        pos: { x: -0.5, y: 0.6, z: -0.5 }
+        rot: { x: 45, y: 135, z: 0 }
+        scale: { x: 0.7, y: 0.7, z: 1 }
+    mods:
+      - name: DestroyOwnerWhenPlayerEntersSquare
+
+
+sounds:
+# See CoOperation for examples using sound
+
+globalData:
+  # Set global data and overrides.  See https://www.mindfeastgames.com/MultiTurn/Docs/API.html#mod-data
+  g1: { health: 10 }
+  g2: { health: 10 }
+  g3: { health: 10 }
+  g4: { health: 10 }

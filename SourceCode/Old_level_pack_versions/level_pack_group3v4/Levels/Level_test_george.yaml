@@ -1,0 +1,196 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: OriginalWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 58.0, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,c1,d1,e1,f1,g1,__,__,h1,i1,j1,k1,l1,m1,n1,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,c2,d2,e2,f2,g2,__,__,h2,i2,j2,k2,l2,m2,n2,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b3,c3,d3,e3,f3,g3,__,__,h3,i3,j3,k3,l3,m3,n3,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b4,c4,d4,e4,f4,g4,__,__,h4,i4,j4,k4,l4,m4,n4,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b5,c5,d5,e5,f5,g5,__,__,h5,i5,j5,k5,l5,m5,n5,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b6,c6,d6,e6,f6,g6,__,__,h6,i6,j6,k6,l6,m6,n6,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b7,c7,d7,e7,f7,g7,__,__,h7,i7,j7,k7,l7,m7,n7,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b8,c8,d8,e8,f8,g8,__,__,h8,i8,j8,k8,l8,m8,n8,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b9,c9,d9,e9,f9,g9,__,__,h9,i9,j9,k9,l9,m9,n9,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,ea,fa,__,__,__,__,ia,ja,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__
+
+gridObjects:
+
+  c1: [ wall_corner_se ]
+  d1: [ wall_s ]
+  e1: [ wall_s ]
+  f1: [ wall_s ]
+  g1: [ wall_s ]
+  h1: [ wall_s ]
+  i1: [ wall_s ]
+  j1: [ wall_s ]
+  k1: [ wall_s ]
+  l1: [ wall_s ]
+  m1: [ wall_s ]
+  n1: [ wall_s ]
+
+  c2: [ f ]
+  d2: [ f ]
+  e2: [ f ]
+  f2: [ f, ball ]
+  g2: [ f ]
+  h2: [ f, temporaryTable_n ]
+  i2: [ f ]
+  j2: [ f ]
+  k2: [ f ]
+  l2: [ f ]
+  m2: [ f ]
+  n2: [ f ]
+
+  b3: [ wall_e ]
+  c3: [ f ]
+  d3: [ f, Doll  ]
+  e3: [ f ]
+  f3: [ f ]
+  g3: [ f ]
+  h3: [ f ]
+  i3: [ f,]
+  j3: [ f, ghost_sherlock ]
+  k3: [ f ]
+  l3: [ f ]
+  m3: [ f ]
+  n3: [ f ]
+
+  b4: [ wall_e ]
+  c4: [ f ]
+  d4: [ f, table ]
+  e4: [ f ]
+  f4: [ f, ghost_party ]
+  g4: [ f ]
+  h4: [ f ]
+  i4: [ f ]
+  j4: [ f ]
+  k4: [ f ]
+  l4: [ f ]
+  m4: [ f ]
+  n4: [ f ]
+
+  b5: [ wall_e]
+  c5: [ f, { id: ghost_original, data: { id: g2 } } ]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [ f ]
+  g5: [ f ]
+  h5: [ f ]
+  i5: [ f ]
+  j5: [ f, Cat_P ]
+  k5: [ f ]
+  l5: [ f ]
+  m5: [ f ]
+  n5: [ f ]
+
+  b6: [ wall_e ]
+  c6: [ f ]
+  d6: [ f ]
+  e6: [ f ]
+  f6: [ f ]
+  g6: [ f ]
+  h6: [ f ]
+  i6: [ f, ghost_cowboy ]
+  j6: [ f ]
+  k6: [ f ]
+  l6: [ f ]
+  m6: [ f ]
+  n6: [ f ]
+
+  b7: [ wall_e ]
+  c7: [ f ]
+  d7: [ f ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f ]
+  h7: [ f ]
+  i7: [ f ]
+  j7: [ f ]
+  k7: [ f ]
+  l7: [ f ]
+  m7: [ f ]
+  n7: [ f ]
+
+  b8: [ wall_e ]
+  c8: [ f ]
+  d8: [ f ]
+  e8: [ f ]
+  f8: [ f ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+  j8: [ f ]
+  k8: [ f ]
+  l8: [ f ]
+  m8: [ f ]
+  n8: [ f ]
+
+  b9: [ wall_e ]
+  c9: [ f ]
+  d9: [ f ]
+  e9: [ f ]
+  f9: [ f ]
+  g9: [ f ]
+  h9: [ f ]
+  i9: [ f ]
+  j9: [ f ]
+  k9: [ f ]
+  l9: [ f ]
+  m9: [ f ]
+  n9: [ f ]
+
+  fa: [ f, p1, floordeco2 ]
+  ia: [ f, p2, floordeco3 ]
+  ea: [ f, floordeco2 ]
+  ja: [ f, floordeco3 ]
+
+objectDefinitions:
+  power1:
+    mapObject: BlankMobile
+    art3d:
+      - model: "Art/3D/Sphere.glb"
+        pos: { y: 1 }
+        scale: { x: 0.5, y: 0.5, z: 0.6 }
+    art2d:
+      - texture: "MakeYourOwnWithThisTemplate.png"
+        displayType: decal
+        projectionDistance: 1
+        pos: { x: -0.5, y: 0.6, z: -0.5 }
+        rot: { x: 45, y: 135, z: 0 }
+        scale: { x: 0.7, y: 0.7, z: 1 }
+    mods:
+      - name: DestroyOwnerWhenPlayerEntersSquare
+
+
+sounds:
+  # See CoOperation for examples using sound
+  BackgroundMusic: { fileNames: [ 098_1.ogg ] }
+
+globalData:
+  # Set global data and overrides.  See https://www.mindfeastgames.com/MultiTurn/Docs/API.html#mod-data
+  # g1 = ghost 1, g2 = ghost 2 - use this to override health amd movement default arrays
+  # e.g. 5 spaces south, 2 spaces east, 5 north, and 2 west
+  g1: { health: 3, moves: ["5", "south","2","east","5","north","2","west"]}

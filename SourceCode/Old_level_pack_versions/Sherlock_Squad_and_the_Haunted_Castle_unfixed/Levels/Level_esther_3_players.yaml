@@ -1,0 +1,133 @@
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: OriginalWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 65, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,f1,g1,h1,i1, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,e2,f2,g2,h2,i2, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,b3,c3,d3,e3,f3,g3,h3,i3, __,__,__,__,__,
+  __,__,__,__,__,__,__, a4,b4,c4,d4,e4,f4,g4,h4,i4, __,__,__,__,__,
+  __,__,__,__,__,__,__, a5,b5,c5,d5,e5,f5,g5,h5,i5, __,__,__,__,__,
+  __,__,__,__,__,__,__, a6,b6,c6,d6,e6,f6,g6,h6,i6, __,__,__,__,__,
+  __,__,__,__,__,__,__, a7,b7,c7,d7,e7,f7,g7,h7,i7, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,e8,f8,g8,h8,i8, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,e9,f9,g9,h9,i9, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,ea,fa,ga,ha,ia, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,eb,fb,gb,hb,ib, __,__,__,__,__,
+  
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+gridObjects:
+  f1: [ wall_s ]
+  g1: [ wall_s ]
+  h1: [ wall_s ]
+  i1: [ wall_s, alight ]
+
+  e2: [ wall_e ]
+  f2: [ f, { id: table, data: { id: t2 } } ]
+  g2: [ f, alight ]
+  h2: [ f ]
+  i2: [ f, torch_s ]
+
+  a3: [ wall_e ]
+  b3: [ wall_s ]
+  c3: [ wall_s ]
+  d3: [ wall_s ]
+  e3: [ wall_e, wall_s ]
+  f3: [ f, torch_e ]
+  g3: [ f ]
+  h3: [ f ]
+  i3: [ f ]
+
+  a4: [ wall_e ]
+  b4: [ f, torch_e ]
+  c4: [ f, H_ball, magPrompt ]
+  d4: [ f, { id: ghost_original, data: { id: g2 } } ]
+  e4: [ f ]
+  f4: [ f, alight ]
+  g4: [ f ]
+  h4: [ f, H_Doll, magPrompt ]
+  i4: [ f ]
+
+  a5: [ wall_e ]
+  b5: [ f ]
+  c5: [ f, alight ]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [ f ]
+  g5: [ f ]
+  h5: [ f ]
+  i5: [ f ]
+
+  a6: [ wall_e ]
+  b6: [ f, p2, floordeco3 ]
+  c6: [ f ]
+  d6: [ f ]
+  e6: [ f ]
+  f6: [ f ]
+  g6: [ f ]
+  h6: [ f ]
+  i6: [ f, { id: table, data: { id: t1 } }, alight ]
+
+  a7: [ wall_e, alight ]
+  b7: [ f, torch_e ]
+  c7: [ f, magTable_e ]
+  d7: [ f, H_Cat_P, magPrompt  ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f ]
+  h7: [ f ]
+  i7: [ f, H_Doll, magPrompt ]
+
+  e8: [ wall_e ]
+  f8: [ f, H_ball, magPrompt, torch_e ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+
+  e9: [ wall_e ]
+  f9: [ f, { id: ghost_original, data: { id: g1 } }, alight ]
+  g9: [ f ]
+  h9: [ f ]
+  i9: [ f, magTable_e ]
+
+  ea: [ wall_e ]
+  fa: [ f, alight, torch_e ]
+  ga: [ f ]
+  ha: [ f ]
+  ia: [ f, H_Cat_P, magPrompt, alight ]
+
+  eb: [ wall_e, alight ]
+  fb: [ f ]
+  gb: [ f ]
+  hb: [ f, p1, floordeco3 ]
+  ib: [ f ]
+
+
+objectDefinitions:
+
+
+sounds:
+# See CoOperation for examples using sound
+
+globalData:
+  g1: { health: 10, linkTable: t1}
+  g2: { health: 10, linkTable: t2 }
+  t1: { linkGhost: t1 }
+  t2: { linkGhost: t2 }

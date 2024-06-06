@@ -1,0 +1,232 @@
+include: [ "LevelsShared.yaml" ]
+
+# Properties about the file like its creator
+fileProperties:
+  creatorName: Mind Feast Games
+
+# The Unity scene that will be loaded as background
+sceneName: World1Dev
+
+grid:
+
+gridObjects:
+  lr: [ levelResults ]
+  dd: [  ]
+  mm: [  ]
+  TT: [  ]
+  
+  d1: [  ]
+  e1: [  ] 
+  f1: [  ]
+  g1: [  ]
+  h1: [  ]
+  i1: [  ]
+  j1: [  ]
+  k1: [  ]
+  l1: [  ]
+  m1: [  ]
+  n1: [  ]
+  o1: [  ]
+  p1: [  ]
+  q1: [  ]
+  r1: [  ]
+  s1: [  ]
+  t1: [  ]
+  u1: [  ]
+
+  d2: [  ]
+  e2: [  ] 
+  f2: [  ]
+  g2: [  ]
+  h2: [ wall_corner_se ]
+  i2: [ wall_s ]
+  j2: [ wall_s ]
+  k2: [ wall_s ]
+  l2: [ wall_s ]
+  m2: [ wall_s ]
+  n2: [ wall_s ]
+  o2: [ wall_s ]
+  p2: [  ]
+  q2: [  ]
+  r2: [  ]
+  s2: [  ]
+  t2: [  ]
+  u2: [  ]
+
+  d3: [  ]
+  e3: [  ] 
+  f3: [  ]
+  g3: [ wall_e ]
+  h3: [ f ]
+  i3: [ f ]
+  j3: [ f ]
+  k3: [ f ]
+  l3: [ f ]
+  m3: [ f ]
+  n3: [ f ]
+  o3: [ f ]
+  p3: [  ]
+  q3: [  ]
+  r3: [  ]
+  s3: [  ]
+  t3: [  ]
+  u3: [  ]
+
+  d4: [  ]
+  e4: [  ]
+  f4: [  ]
+  g4: [ wall_e ]
+  h4: [ f ]
+  i4: [ f ]
+  j4: [ f ]
+  k4: [ f ]
+  l4: [ f ]
+  m4: [ f ]
+  n4: [ f ]
+  o4: [ f ]
+  p4: [  ]
+  q4: [  ]
+  r4: [  ]
+  s4: [  ]
+  t4: [  ]
+  u4: [  ]
+
+  d5: [  ]
+  e5: [  ]
+  f5: [  ]
+  g5: [ wall_e ]
+  h5: [ f ]
+  i5: [ f ]
+  j5: [ f ]
+  k5: [ f ]
+  l5: [ f ]
+  m5: [ f ]
+  n5: [ f ]
+  o5: [ f ]
+  p5: [  ]
+  q5: [  ]
+  r5: [  ]
+  s5: [  ]
+  t5: [  ]
+  u5: [  ]
+
+  d6: [  ]
+  e6: [  ]
+  f6: [  ]
+  g6: [ wall_e ]
+  h6: [ f ]
+  i6: [ f ]
+  j6: [ f ]
+  k6: [ f ]
+  l6: [ f ]
+  m6: [ f ]
+  n6: [ f ]
+  o6: [ f ]
+  p6: [  ]
+  q6: [  ]
+  r6: [  ]
+  s6: [  ]
+  t6: [  ]
+  u6: [  ]
+
+  d7: [  ]
+  e7: [  ]
+  f7: [  ]
+  g7: [ wall_e ]
+  h7: [ f ]
+  i7: [ f ]
+  j7: [ f, nextleveldeco2 ]
+  k7: [ f, nextleveldeco2 ]
+  l7: [ f, nextleveldeco2 ]
+  m7: [ f, nextleveldeco2 ]
+  n7: [ f ]
+  o7: [ f ]
+  p7: [  ]
+  q7: [  ]
+  r7: [  ]
+  s7: [  ]
+  t7: [  ]
+  u7: [  ]
+
+  d8: [  ]
+  e8: [  ]
+  f8: [  ]
+  g8: [ wall_e ]
+  h8: [ f ]
+  i8: [ f ]
+  j8: [ f ]
+  k8: [ f ]
+  l8: [ f ]
+  m8: [ f ]
+  n8: [ f ]
+  o8: [ f ]
+  p8: [  ]
+  q8: [  ]
+  r8: [  ]
+  t8: [  ]
+  u8: [  ]
+
+  d9: [  ]
+  e9: [  ]
+  f9: [  ]
+  g9: [ wall_e ]
+  h9: [ f ]
+  i9: [ f ]
+  j9: [ f, replayleveldeco2 ]
+  k9: [ f, replayleveldeco2 ]
+  l9: [ f, replayleveldeco2 ]
+  m9: [ f, replayleveldeco2 ]
+  n9: [ f ]
+  o9: [ f ]
+  p9: [  ]
+  q9: [  ]
+  r9: [  ]
+  s9: [  ]
+  t9: [  ]
+  u9: [  ]
+
+  da: [  ]
+  ea: [  ]
+  fa: [  ]
+  ga: [ wall_e ]
+  ha: [ f ]
+  ia: [ f ]
+  ja: [ f ]
+  ka: [ f ]
+  la: [ f ]
+  ma: [ f ]
+  na: [ f ]
+  oa: [ f ]
+  pa: [  ]
+  qa: [  ]
+  ra: [  ]
+  sa: [  ]
+  ta: [  ]
+  ua: [  ]
+
+objectDefinitions:
+  levelResults: { mapObject: BlankStatic, mods: [ LevelResults ] }
+  
+
+  nextleveldeco2: { mapObject: Custom, art2d: [ { texture: "nextleveldeco.png", displayType: decal, projectionDistance: 0.2, pos: {x: 0, y: -0.9, z: 0}, rot: {x: 90, y: 180, z: 0}, scale: {x: 2, y: 2, z: 0} } ], tags: [ "decal", "NextLevel" ] }
+  replayleveldeco2: { mapObject: Custom, art2d: [ { texture: "replayleveldeco.png", displayType: decal, projectionDistance: 0.2, pos: {x: 0, y: -0.9, z: 0}, rot: {x: 90, y: 180, z: 0}, scale: {x: 2, y: 2, z: 0} } ], tags: [ "decal", "ReplayLevel" ] }
+
+  # No scoreboard in results levels
+  scoreboard: { mapObject: BlankStatic }
+
+  zone1: { mapObject: BlankStatic, tags: [ "Zone-1", "static" ] }
+  zone2: { mapObject: BlankStatic, tags: [ "Zone-2", "static" ] }
+  zone3: { mapObject: BlankStatic, tags: [ "Zone-3", "static" ] }
+  zone4: { mapObject: BlankStatic, tags: [ "Zone-4", "static" ] }
+
+
+
+
+
+
+
+globalData:
+
+  delayPerTurn: { delayPerTurn: 0 }
+
+sounds:

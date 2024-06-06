@@ -1,0 +1,61 @@
+rounds:
+- playersTurns:
+  - - action: move
+      data: north
+    - action: move
+      data: west
+    - action: move
+      data: west
+    - action: move
+      data: north
+  - - action: act
+      data: west
+    - action: move
+      data: south
+    - action: move
+      data: west
+    - action: move
+      data: west
+- playersTurns:
+  - - action: act
+      data: west
+    - action: act
+      data: east
+    - action: move
+      data: east
+    - action: move
+      data: east
+  - - action: move
+      data: west
+    - action: act
+      data: north
+    - action: move
+      data: east
+    - action: move
+      data: east
+- playersTurns:
+  - - action: move
+      data: north
+    - action: move
+      data: north
+    - action: act
+      data: north
+    - {}
+  - - action: move
+      data: east
+    - action: move
+      data: east
+    - action: move
+      data: south
+    - action: move
+      data: south
+- playersTurns:
+  - - {}
+    - {}
+    - {}
+    - {}
+  - - action: act
+      data: south
+    - {}
+    - {}
+    - {}

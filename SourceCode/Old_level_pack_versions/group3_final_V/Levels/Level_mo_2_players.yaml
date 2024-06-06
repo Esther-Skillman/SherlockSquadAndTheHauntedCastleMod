@@ -1,0 +1,146 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: OriginalWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 65, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  
+  __,__,__,__, __,__,__,W1,WS,WS,WS,W2,__,__, __,__,__,__,__,__,
+  __,__,__,__, __,W1,WS,7c,7e,7f,7g,7h,WS,WS, __,__,__,__,__,__,
+  __,__,__,__, __,80,8a,8c,__,__,__,8h,8j,8k, __,__,__,__,__,__,
+  __,__,__,__, WE,90,9a,9c,9e,9f,9g,9h,9j,9k, __,__,__,__,__,__,
+  __,__,__,__, WE,02,a2,c2,__,f2,__,h2,j2,k2, __,__,__,__,__,__,
+  __,__,__,__, WE,04,__,c4,e4,f4,g4,__,__,__, __,__,__,__,__,__,
+  __,__,__,__, WE,05,__,c5,e5,f5,g5,__,__,__, __,__,__,__,__,__,
+  __,__,__,__, WE,07,a7,c7,e7,__,g7,h7,j7,k7, __,__,__,__,__,__,
+  __,__,__,__, WE,09,a9,c9,e9,f9,g9,h9,j9,k9, __,__,__,__,__,__,
+  __,__,__,__, WE,0a,aa,ca,__,__,__,ha,ja,ka, __,__,__,__,__,__,
+  __,__,__,__, __,__,__,cb,eb,fb,gb,hb,__,__, __,__,__,__,__,__,
+  
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,
+  __,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__
+
+gridObjects:
+  W1: [ wall_corner_se ]
+  W2: [ wall_corner_es ]
+  WS: [ wall_s ]
+  WE: [ wall_e ]
+
+  80: [ f, alight, torch_e ]
+  90: [ f ]
+  01: [ f ]
+  02: [ f, alight, torch_e ]
+  03: [ f ]
+  04: [ f, H_Doll, magPrompt ]
+  05: [ f, EvidenceBox ]
+  07: [ fc1, alight, torch_e, { id: ghost_original, data: { id: g3 } } ]
+  09: [ fs ]
+  0a: [ fc, alight, torch_e, H_Cat_P, magPrompt  ]
+
+  9a: [ f, { id: table, data: { id: t2 } } ]
+  9b: [ f  ]
+  9c: [ f ]
+  9e: [ f, H_Cat_P, magPrompt ]
+  9d: [ f ]
+  9f: [ f ]
+  9g: [ f ]
+  9h: [ f ]
+  9j: [ f, { id: table, data: { id: t1 } } ]
+  9k: [ f ]
+
+  8a: [ f, H_ball , magPrompt ]
+  8b: [ f ]
+  8c: [ f ]
+  8h: [ f ]
+  8j: [ f, { id: ghost_party, data: { id: g1 } } ]
+  8k: [ f, alight, torch_s ]
+
+
+  7c: [ f, alight, torch_e ]
+  7d: [ f ]
+  7e: [ f ]
+  7f: [ f ]
+  7g: [ f, p2, floordeco3 ]
+  7h: [ f, alight, torch_s ]
+
+  a2: [ f , { id: ghost_sherlock, data: { id: g2 } } ]
+  b2: [ f ]
+  c2: [ f ]
+  d2: [ f ]
+  f2: [ f ]
+  h2: [ f, EvidenceBox, H_Doll ]
+  j2: [ f ]
+  k2: [ f, alight ]
+
+  c4: [ f ]
+  d4: [ f ]
+  e4: [ f, magTable_e ]
+  f4: [ f ]
+  g4: [ f, alight ]
+
+  c5: [ f ]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [ f, magTable_e ]
+  g5: [ f ]
+
+
+  a7: [ f ]
+  b7: [ f ]
+  c7: [ f, EvidenceBox, H_ball ]
+  e7: [ f ]
+  g7: [ f, EvidenceBox ]
+  h7: [ f ]
+  j7: [ f ]
+  k7: [ f, alight ]
+
+  a9: [ f, { id: table, data: { id: t3 } } ]
+  b9: [ f ]
+  c9: [ f ]
+  d9: [ f ]
+  e9: [ f ]
+  f9: [ f, H_Doll, magPrompt ]
+  g9: [ f ]
+  h9: [ f ]
+  j9: [ f, H_ball, magPrompt ]
+  k9: [ f ]
+
+  aa: [ f ]
+  ba: [ f ]
+  ca: [ f ]
+  ha: [ f ]
+  ja: [ f, EvidenceBox, H_Cat_P ]
+  ka: [ f, alight ]
+
+  cb: [ f, alight, torch_e ]
+  db: [ f ]
+  eb: [ f, p1, floordeco3 ]
+  fb: [ f ]
+  gb: [ f ]
+  hb: [ f, alight ]
+
+objectDefinitions:
+
+
+sounds:
+# See CoOperation for examples using sound
+
+globalData:
+  g1: { health: 17, moves: [], linkTable: t1}
+  g2: { health: 15, moves: [], linkTable: t2}
+  g3: { health: 10, moves: ["2", "east","1","south","1","west","1","south","1","west","2","north"], linkTable: t3}
+  t1: { linkGhost: t1 }
+  t2: { linkGhost: t2 }
+  t3: { linkGhost: t3 }

@@ -1,0 +1,70 @@
+Minutes 17-10-23. 15:00
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+To discuss and agree our bidding for Comp2003 project.
+•	As a team we will submit a single project bid that will include swot analysis for each of us, so we will all submit the same document.
+•	Will are considering ideas for the start-up and deciding as a group which project briefs to bid for.
+•	Our first choice VR 3D Drawing for Bugs and Notes
+•	Our second choice and start-up project yet undecided
+•	We will read the project brief more fully this evening, and have agreed to meet tomorrow in the university library at 10:15
+•	We will each consider our own SWOT, add these to the project bidding template in our shared folder at the top in a different colour, this will then be assimilated into a single document for submission.
+
+Minutes 18-10-23. 10:15
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+•	Mohamad has had an interesting idea for a start-up, a website that educates users about a catalogue of trees, users collect points to spend on planting trees, we would look to sell advertising on the website. he will provide more details in the bid.
+•	We all agreed on our First Client Bid: Triangular Pixels VR 3D Drawing for Bugs and Notes
+•	Our second bid will be for Mind Feast Games development.
+•	For the start-up tree information website 
+
+
+Minutes 20-10-23. 9:00
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+•	We met and discussed our final choices for bidding.
+•	We agreed upon the order of our bids. Preferred client Mind Feast the second preference was Triangular pixels drawing, and then our own start-up project added to the submission.
+•	Megan also provided a link to a project she has been working on to demonstrate her artistic skills where she has created a 2D game in a style suitable for adaptation to the Mind Feast brief.
+•	At 11am we took part in the meet and greet session beginning with Shaz from Mind Feast. Shaz questions were asked by us from our group and other groups were also present. To summarize, Shaz explained that there is plenty of scope for creativity and flexibility in developing their existing product or even adapting their existing platform to create something new. We all agreed that this project was very exciting, extending our knowledge to include a new scripting language Lua. The addition of speech bubbles to the platform was suggested by Esther and this was greeted enthusiastically by Shaz, and he also mentioned that this is something that they are also currently developing. Murder mystery games development and an underwater style of game were also viable suggestions.
+•	At 11:35am we met with Katie Goode from Triangular Pixels, using Unity and C# to develop a virtual console drawing application that would extend to capture screen shots and saving of art and impressions drawn in a virtual environment. Esther mentioned the food VR game sounded interesting but wasn’t worth the extra difficulty it would impose.
+•	At 12:30 as a team we met Tony to discuss our start-up idea. Tree Information website (details in our bid document). Tony agreed in principle that the idea required refinement but was a good idea. Initially we were thinking on combining a game with an information website and Tony suggested we begin our development with this in mind and then advised that whilst the principle of our start-up was good, we may need, at some point, to decide whether our idea was going to be a game or information website.
+
+Minutes 25-10-23. 10:15
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+•	For research purposes we will be logging in to play Co Operation as a group and then continue with this meeting
+•	Esther wrote a response to Shaz’s email agreeing to a group meeting for Monday. Shaz has not yet specified a time, albeit we will all be available 
+•	We noted that lua (their programming language) is doable in visual studio, before we install patches to our vs, we will first wait to see if they use any specific development environment at Mind Feast
+•	Played the game, fun, immersive, co-operative
+•	We will be reading through the documentation prior to the Monday meeting
+•	Room 216 in the library has been booked for our meeting with Shaz for Monday.
+
+
+Minutes 26-10-23. 
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+•	Monday afternoon we received an email from Shaz as follows:
+•	Hi Esther,
+•	That's great to hear you enjoyed playing the base game :)
+•	We usually have group/team calls in the afternoon and start anytime between 12pm and 2pm. Will that work for you?
+•	Also, shall we switch to messaging each other on our Discord? Might be quicker?
+•	We will all be available for this, and George has been trying to book a room in the library, the only room available for these times is 014 with a 2 person capacity. We have booked this room so that we have at least got somewhere, and this can be cancelled if something better is found in the meantime.
+•	Esther has taken the role of lead in our communications with Shaz at Mind Feast. A decision that everyone is in agreement with.
+
+Minutes 30-10-23. 
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman, Comp2003 group 10, Comp2003 group 23, Shaz and Rupert.
+•	Initially our group met in a room in Cookworthy building and logged into Discord for the meeting.
+•	There were technical issues and we could not start the meeting, so we went to Esther's house and joined the meeting there.
+•	Following brief introductions the meeting continued.
+•	Shaz explained that we were required to first develop a new level as an extension of the existing game,
+•	we would then work toward creating a new game of our own creation based on their platform and game structure.
+•	Everyone agreed a good idea would be that all the teams should collaborate in helping each other with product testing.
+•	Rupert provided some demonstration of software development and good practices but this was difficult to followon the one screen for the four of us in the group.
+•	Some questions were asked by the other group members pertaining to requirements and Shaz advised that we all have basically a free hand to come up
+•	with and develop our own ideas, so long as we stick to the existing game culture of co-operation, fun and non-competitive nature.
+•	Shaz will be contacting our groups to advise of when we would be meeting next.
+•	Our group will discuss and agree on a plan for the next meeting to be in a better environment and without technical issues.
+
+Minutes 23-11-2023
+Attendees: Mohamad Trissi, Megan White, George Arghyrou, Esther Skillman.
+•	Haunted house game idea planned
+•	Individual next steps agreed
+•	Storyboard designed
+
+
+
+

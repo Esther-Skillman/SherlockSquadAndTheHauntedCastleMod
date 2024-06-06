@@ -1,0 +1,174 @@
+include: [ CoOpAnimationDefinitions.yaml]
+
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: World1Dev
+
+grid:
+
+gridObjects:
+    gm: [  gm, delay, scoreboard ]
+
+
+objectDefinitions:
+
+  # Game manager etc
+  gm: { mapObject: BlankStatic, mods: [ GameManager ] }
+  delay: { mapObject: BlankStatic, mods: [ { name: DelayPerTurn, data: { id: delayPerTurn, delayPerTurn: 1000 } } ] }
+
+  scoreboard: { mapObject: Scoreboard, mods: [ Scoreboard ], tags: [ "scoreboard" ] }
+
+  # Players
+  p1: { mapObject: Player 1, mods: [ Move, Act1, Throw ] }
+  p2: { mapObject: Player 2, mods: [ Move, Act1, Throw ] }
+  p3: { mapObject: Player 3, mods: [ Move, Act1, Throw ] }
+  p4: { mapObject: Player 4, mods: [ Move, Act1, Throw ] }
+
+  #ghost
+  ghost:
+    mapObject: Custom
+    mods: ['Ghost']
+    dir: south
+    art2d:
+      - textures: [ 'Ghost.png' ]
+        pos: { x: 0.2, y: 1, z: 0 }
+        rot: { x: 0, y: -45, z: 0 }
+        scale: { x: 2, y: 2, z: 2 }
+    data: { health: 10, need: pill }
+    tags: [ "ghost", "animated", "carryable", "cameraTarget" ]
+
+  #block move and throw
+  blockmove: { mapObject: BlankStatic, tags: [ "blocksMove" ] } # this is an invisible object to block a tile from being walked on
+  blockthrow: { mapObject: BlankStatic, tags: [ "blocksThrow" ] } # this is an invisible object to block things being thrown over a tile
+  blockboth: { mapObject: BlankStatic, tags: [ "blocksThrow", "blocksMove" ] } # this is an invisible object to block things being thrown and block movemnet over a tile
+
+
+  # Basic scenery for user customisation
+  f: { mapObject: Custom, dir: north, art3d: [ { model: "Art/3D/Floor.glb", pos: {x: 0, y: -0.27, z: 0}, rot: {x: 0, y: 0, z: 0}, scale: {x: 1, y: 1, z: 1} } ], tags: [ "floor", "static" ] }
+  wall_s: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/Wall.glb", pos: {x: -1, y: -0.1, z: 0}, rot: {x: 0, y: 90, z: 0},scale: {x: 1, y: 1, z: 1} } ], tags: [ "blocksMove", "blocksThrow", "static" ] }
+  wall_e: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/Wall.glb", pos: {x: 0, y: -0.1, z: -1}, rot: {x: 0, y: 0, z: 0},scale: {x: 1, y: 1, z: 1} } ], tags: [ "blocksMove", "blocksThrow", "static" ] }
+
+  #wall corner pieces
+  wall_corner_se: { mapObject: Custom, dir: south, art3d: [ { model: "Art/3D/Wall_Corner.glb", pos: {x: -2, y: -0.1, z: 1}, rot: {x: 0, y: 270, z: 0}, scale: {x: 1, y: 1, z: 1} } ], tags: [ "blocksMove", "blocksThrow", "static" ] }
+
+  # Prefabs
+  # Base patient has 5 health and needs a syringe
+  patient: { mapObject: Patient, mods: [ Patient1 ], data: { health: 5, need: syringe }, tags: [ "carryable", "throwable", "oldPrefabPatient" ] }
+
+  # Remedies
+  pill: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/PillBottle.glb", pos: {x: 0.4, y: 1.4, z: 0.3}, rot: {x: -18, y: 0, z: 0}, scale: {x: 1, y: 1, z: 1} } ], tags: [ "throwable", "carryable" , "pill"  ], mods: [{name : water}]}
+  #syringe: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/Syringe.glb", pos: {x: 0, y: 1.1, z: 0}, rot: {x: 0, y: 0, z: 0}, scale: {x: 1, y: 1, z: 1} } ], tags: [ "throwable", "carryable" ], mods: [ { name: Medicine, data: { remedy: syringe } } ] }
+
+  # tray and water
+  tray: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/tray.glb", pos: {x: -1.5, y: 1.4, z: 0}, rot: {x: 270, y: 90, z: 90}, scale: {x: 0.75, y: 0.75, z: 0.75} } ], tags: [ "throwable", "carryable" , "tray" ], mods: [{name : tray}]}
+  tray_water: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/tray_water.glb", pos: {x: -1.5, y: 1.4, z: 0}, rot: {x: 270, y: 90, z: 90}, scale: {x: 0.15, y: 0.15, z: 0.15} } ], tags: [ "throwable", "carryable" , "trayW" , 'water'], mods: [{name : tray}]}
+  tray_pill: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/tray_pill1.glb", pos: {x: -1.5, y: 1.4, z: 0}, rot: {x: 270, y: 90, z: 90}, scale: {x: 0.15, y: 0.15, z: 0.15} } ], tags: [ "throwable", "carryable" , "trayP" ], mods: [{name : tray}]}
+  tray_water_pill: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/tray_water_pill.glb", pos: {x: -1.5, y: 1.4, z: 0}, rot: {x: 270, y: 90, z: 90}, scale: {x: 0.15, y: 0.15, z: 0.15} } ], tags: [ "throwable", "carryable" , "trayWP" ], mods: [{name : tray}]}
+  water: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/water.glb", pos: {x: -1, y: 1.4, z: 0.3}, rot: {x: -90, y: 0, z: 0}, scale: {x: 0.15, y: 0.15, z: 0.15} } ], tags: [ "throwable", "carryable" , "water" ], mods: [{name : water}]}
+  doll: { mapObject: Custom, dir: east, art3d: [ { model: "Art/3D/newDoll.glb" , pos: { y: 1 }, rot: { x: 270, y: 150, z: 0 }, scale: { x: 0.045, y: 0.045, z: 0.046 } } ], tags: [ "throwable", "carryable" ]}
+
+  #MagGlasses
+  MagGlasses: { mapObject: Custom, dir: west, art3d: [ { model: "Art/3D/Magnifying_Glass.glb", pos: { x: 0.4, y: 1.4, z: 0.3 }, rot: { x: -18, y: 0, z: 0 }, scale: { x: 2.5, y: 2.5, z: 2.5 } } ], tags: [ "throwable", "carryable" , "MagGlasses" ], mods: [ { name: water } ] }
+
+
+  # Clipboard
+  clipboard_pill: { mapObject: Custom, dir: east, art2d: [ { texture: "clipboard_pill.png", pos: {x: 0, y: 0.52, z: -0.82}, scale: {x: 1.3, y: 1.3, z: 1}, rot: {x: -12.0} } ], tags: [ "clipboard" ] }
+
+  #cabinets
+  dispenser: { mapObject: Custom, mods: [ DispenserAuto], tags: [ "dispenser", "blocksMove", "wobbleWhenBumped", "animated", "bounceIn", "objectCountdown", "CameraTarget" ] }
+
+  cab_s1:     { base: [ dispenser ], dir: south, data: { items: [ "MagGlasses"] },                       art3d: [ { model: "Art/3D/Pedestal.glb", rot: { x: 0, y: 270, z: 0 } } ] }
+  cab_s:       { base: [ dispenser ], dir: south, data: { items: [ "apple" ] },                         art3d: [ { model: "Art/3D/Pedestal.glb", rot: { x: 0, y: 270, z: 0 } } ] }
+  cab_closed_e1: { base: [ dispenser ], dir: east,  data: { items: [ "MagGlasses" ] }, art3d: [ { model: "Art/3D/Cabinet_C.glb" } ] }
+  cab_closed_s: { base: [ dispenser ], dir: south, data: { items: [ "pill1_s", "pill2_s", "pill3_s" ] }, art3d: [ { model: "Art/3D/Cabinet_C.glb" } ] }
+
+  #floordeco
+  floordeco1: { mapObject: Custom, art2d: [ { texture: "floordeco13.png",  projectionDistance: 0.01, pos: { x: 0, y: 0, z: 0 }, rot: { x: 90, y: 180, z: 0 }, scale: { x: 1.2, y: 1.2, z: 0 } } ], tags: [ "decal" ] }
+  floordeco2: { mapObject: Custom, art2d: [ { texture: "floordeco4.png",  projectionDistance: 0.01, pos: { x: 0, y: 0, z: 0 }, rot: { x: 90, y: 180, z: 0 }, scale: { x: 1.2, y: 1.2, z: 0 } } ], tags: [ "decal" ] }
+  floordeco3: { mapObject: Custom, art2d: [ { texture: "floordeco21.png",  projectionDistance: 0.01, pos: { x: 0, y: 0, z: 0 }, rot: { x: 270, y: 0, z: 0 }, scale: { x: 1.2, y: 1.2, z: 0 } } ], tags: [ "decal" ] }
+
+  #Evidence
+  Evidence: {mapObject: Custom, dir: east, tags: ["evidence", "throwable", "carryable"], mods: [PlaceEvidence, MagGlass ]}
+
+  Doll:
+    base: [ Evidence ]
+    art3d:
+      - model: "Art/3D/newDoll2.glb"
+    tags: [ "doll" ]
+
+  ball:
+    base: [ Evidence ]
+    art3d:
+      - model: "Art/3D/newBall.glb"
+        pos: { x: 0, y: 0.5, z: 0 }
+        rot: { x: 0, y: -100, z: 0 }
+        scale: { x: 0.5, y: 0.5, z: 0.5 }
+    tags: [ "ball" ]
+
+  Cat_P:
+    base: [ Evidence ]
+    art3d:
+      - model: "Art/3D/newCat_Picture2.glb"
+    tags: [ "picture" ]
+
+  #evidence table
+  tableBase: {mapObject: Custom, dir: east,tags: ["evidenceTable" ,"blocksMove","blocksThrow", "wobbleWhenBumped" ] , mods: [{name : table}]}
+  table:
+    base: [ tableBase ]
+    art3d:
+      - model: "Art/3D/newTable2.glb"
+    tags: [ "empty" ]
+
+  table_doll:
+    base: [ tableBase ]
+    art3d:
+      - model: "Art/3D/newTable_D.glb"
+    tags: [ "doll" ]
+  table_ball:
+    base: [ tableBase ]
+    art3d:
+      - model: "Art/3D/newTable_B.glb"
+    tags: [ "ball" ]
+  table_picture:
+    base: [ tableBase ]
+    art3d:
+      - model: "Art/3D/newTable_P.glb"
+    tags: [ "picture" ]
+  table_picture_doll:
+      base: [ tableBase ]
+      art3d:
+        - model: "Art/3D/newTable_PD.glb"
+      tags: [ "picture", "doll" ]
+  table_doll_ball:
+      base: [ tableBase ]
+      art3d:
+        - model: "Art/3D/newTable_DB.glb"
+      tags: [ "doll","ball" ]
+  table_ball_picture:
+      base: [ tableBase ]
+      art3d:
+        - model: "Art/3D/newTable_BP.glb"
+      tags: [ "ball","picture" ]
+  table_all_evidence:
+      base: [ tableBase ]
+      art3d:
+        - model: "Art/3D/newTable_PDB.glb"
+      tags: [ "table_all_evidence" ]
+
+
+  # Springy bush (launches patients into the air)
+  spring:
+    mapObject: Bush_3B
+    dir: north
+    tags: ['spring', 'animated']
+    mods: [ Spring ]
+    animationMappings:
+      - topic: 'springing'
+        animations: [!Animation { animationDefinitionName: 'wobble_bush' }]
+
+music:
+
+
+sounds:
