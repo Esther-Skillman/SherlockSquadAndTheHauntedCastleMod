@@ -1,0 +1,155 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: EmptyWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 58.0, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,c1,d1,e1,f1,g1,h1,i1,j1, k1,__,__,__,__,
+  __,__,__,__,__,__,__, __,c2,d2,e2,f2,g2,h2,i2,j2, k2,__,__,__,__,
+  __,__,__,__,__,__,__, b3,c3,d3,e3,f3,g3,h3,i3,j3, k3,__,__,__,__,
+  __,__,__,__,__,__,__, b4,c4,d4,e4,f4,g4,h4,i4,j4, k4,__,__,__,__,
+  __,__,__,__,__,__,__, b5,c5,d5,e5,__,g5,__,i5,j5, k5,__,__,__,__,
+  __,__,__,__,__,__,__, b6,c6,d6,__,__,g6,--,__,j6, k6,__,__,__,__,
+  __,__,__,__,__,__,__, b7,c7,d7,e7,__,g7,__,i7,j7  k7,__,__,__,__,
+  __,__,__,__,__,__,__, b8,c8,d8,e8,f8,g8,h8,i8,j8, k8,__,__,__,__,
+  __,__,__,__,__,__,__, b9,c9,d9,e9,f9,g9,h9,i9,j9, k9,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,fa,ga,ha,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__, __,__,__,__,__
+
+gridObjects:
+  --: [ ef ]
+
+  c1: [ wall_corner_se ]
+  d1: [ wall_s ]
+  e1: [ wall_s ]
+  f1: [ wall_s ]
+  g1: [ wall_s ]
+  h1: [ wall_s ]
+  i1: [ wall_s ]
+  j1: [ wall_s ]
+  k1: [ wall_s ]
+
+  c2: [ f, H_Doll, magPrompt ]
+  d2: [ f ]
+  e2: [ f, torch_s, alight, magTable_e]
+  f2: [ f ]
+  g2: [ f ]
+  h2: [ f, torch_s, alight ]
+  i2: [ f ]
+  j2: [ f ]
+  k2: [ f ]
+
+  b3: [ wall_e ]
+  c3: [ f, torch_e, alight ]
+  d3: [ f ]
+  e3: [ f ]
+  f3: [ f ]
+  g3: [ f ]
+  h3: [ f ]
+  i3: [ f,  { id: ghost_original, data: { id: g2 } }  ]
+  j3: [ f ]
+  k3: [ f ]
+
+  b4: [ wall_e ]
+  c4: [ f ]
+  d4: [ f, Cat_P, EvidenceBox_qmark ]
+  e4: [ f ]
+  f4: [ f ]
+  g4: [ f ]
+  h4: [ f, H_ball, magPrompt ]
+  i4: [ f, ball, EvidenceBox_meg ]
+  j4: [ f ]
+  k4: [ f ]
+
+  b5: [ wall_e]
+  c5: [ f, torch_e, alight, { id: table, data: { id: t1 } } ]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [  ]
+  g5: [ f ]
+  h5: [  ]
+  i5: [ f ]
+  j5: [ f ]
+  k5: [ f, { id: table, data: { id: t2 } }, alight ]
+
+  b6: [ wall_e ]
+  c6: [ f ]
+  d6: [ f ]
+  e6: [  ]
+  f6: [ alight ]
+  g6: [ f, alight ]
+  h6: [  ]
+  i6: [  ]
+  j6: [ f ]
+  k6: [ f ]
+
+  b7: [ wall_e ]
+  c7: [ f,torch_e, alight]
+  d7: [ f, { id: ghost_sherlock, data: { id: g1 } }   ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f ]
+  h7: [ f ]
+  i7: [ f ]
+  j7: [ f, alight ]
+  k7: [ f ]
+
+  b8: [ wall_e ]
+  c8: [ f, magTable_e ]
+  d8: [ f ]
+  e8: [ f, H_Doll, magPrompt  ]
+  f8: [ f ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+  j8: [ f,  EvidenceBox]
+  k8: [ f ]
+
+  b9: [ wall_e ]
+  c9: [ f, torch_e, alight]
+  d9: [ f ]
+  e9: [ f ]
+  f9: [ f ]
+  g9: [ f ]
+  h9: [ f ]
+  i9: [ f, H_Cat_P, magPrompt ]
+  j9: [ f ]
+  k9: [ f ]
+
+  ea: [ f ]
+  fa: [ f, p1, floordeco3, alight]
+  ga: [ f, p3, floordeco3]
+  ha: [ f, p2, floordeco3, alight ]
+
+objectDefinitions:
+
+
+sounds:
+# See CoOperation for examples using sound
+
+globalData:
+  # Set global data and overrides.  See https://www.mindfeastgames.com/MultiTurn/Docs/API.html#mod-data
+  g1: { health: 13, moves: ["5", "north","2","east","5","south","2","west"], linkTable: t1 }
+  g2: { health: 13, appearOnTurn: 3, linkTable: t2 }
+  t1: { linkGhost: t1 }
+  t2: { linkGhost: t2 }

@@ -1,0 +1,128 @@
+
+include: [ LevelsShared.yaml ]
+
+fileProperties:
+  creatorName: Group3
+
+sceneName: EmptyWorld
+
+postProcessing:
+  depthOfField: { enabled: true, focusDistance: 65.0, focalLength: 300.0, aperture: 1.0 }
+
+grid: |
+  gm,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,d1,e1,f1,g1,h1,i1,j1,k1,l1,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b4,d4,e4,f4,g4,__,i4,j4,k4,l4,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b5,d5,e5,f5,g5,__,i5,j5,k5,l5,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b6,d6,e6,f6,g6,--,i6,j6,k6,l6,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b7,d7,e7,f7,g7,h7,i7,j7,k7,l7,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, b8,d8,e8,f8,g8,h8,i8,j8,k8,l8,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,ea,__,--,__,ia,__,__,__,__,__,__, __,__,__,__,__,
+
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__,
+  __,__,__,__,__,__,__, __,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__, __,__,__,__,__
+
+gridObjects:
+  --: [ ef ]
+
+  #c1: [ wall_corner_se ]
+  d1: [ wall_s, alight, torch_s ]
+  e1: [ wall_s ]
+  f1: [ wall_s ]
+  g1: [ wall_s, alight, torch_s ]
+  h1: [ wall_s ]
+  i1: [ wall_s ]
+  j1: [ wall_s, alight, torch_s ]
+  k1: [ wall_s ]
+  l1: [ wall_s ]
+
+
+  b4: [ wall_e, alight, torch_e ]
+  d4: [ f, ball, magPrompt ]
+  e4: [ f, { id: table, data: { id: t1 } } ]
+  f4: [ f ]
+  g4: [ f, { id: ghost_cowboy, data: { id: g1 } } ]
+  h4: [  ]
+  i4: [ f, { id: table, data: { id: t2 } } ]
+  j4: [ f]
+  k4: [ f ]
+  l4: [ f, Doll, magPrompt ]
+
+
+  b5: [ wall_e]
+  d5: [ f ]
+  e5: [ f ]
+  f5: [ f ]
+  g5: [ f ]
+  h5: [  ]
+  i5: [ f ]
+  j5: [ f ]
+  k5: [ f ]
+  l5: [ f, EvidenceBox ]
+
+
+  b6: [ wall_e, alight, torch_e ]
+  d6: [ f, Cat_P, magPrompt ]
+  e6: [ f ]
+  f6: [ f ]
+  g6: [ f, Doll, magPrompt ]
+  h6: [  ]
+  i6: [ f, { id: ghost_original, data: { id: g2 } } ]
+  j6: [ f ]
+  k6: [ f, ball, magPrompt ]
+  l6: [ f, alight ]
+
+  b7: [ wall_e ]
+  d7: [ f ]
+  e7: [ f ]
+  f7: [ f ]
+  g7: [ f, magTable_n ]
+  h7: [ f, alight ]
+  i7: [ f, magTable_n ]
+  j7: [ f ]
+  k7: [ f ]
+  l7: [ f ]
+
+  b8: [ wall_e ]
+  d8: [ f, EvidenceBox ]
+  e8: [ f ]
+  f8: [ f ]
+  g8: [ f ]
+  h8: [ f ]
+  i8: [ f ]
+  j8: [ f ]
+  k8: [ f ]
+  l8: [ f, Cat_P, magPrompt ]
+
+  ia: [ f, p1, floordeco3, alight ]
+  ea: [ f, p2, floordeco3, alight ]
+
+objectDefinitions:
+
+
+
+sounds:
+  # See CoOperation for examples using sound
+  BackgroundMusic: { fileNames: [ 098_1.ogg ] }
+  Walk: { fileNames: [ old-church-bell-6298.ogg ] }
+  throw: { fileNames: [ horror-sfx-3-103708.ogg ] }
+
+globalData:
+  # Set global data and overrides.  See https://www.mindfeastgames.com/MultiTurn/Docs/API.html#mod-data
+  # g1 = ghost 1, g2 = ghost 2 - use this to override health amd movement default arrays
+  # e.g. 5 spaces south, 2 spaces east, 5 north, and 2 west
+  g1: { health: 12, linkTable: t1}
+  g2: { health: 12, linkTable: t2 }
+  t1: { linkGhost: t1 }
+  t2: { linkGhost: t2 }
